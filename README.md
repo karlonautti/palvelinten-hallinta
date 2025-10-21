@@ -1,2 +1,2 @@
 # palvelinten-hallinta
-Homerwork reports for course Palvelinten Hallinta taught by Tero Karvinen
+Homework reports for course Palvelinten Hallinta taught by Tero Karvinen
