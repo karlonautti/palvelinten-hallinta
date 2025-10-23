@@ -71,7 +71,11 @@ Nyt ohjelma on asennettu koneelle oikein.
 
 ## a) Debian 13-Trixien asennus virtuaalikoneelle
 
+Debian 13-Trixien asennuksessa ei mitään ongelmia.
+
 ## b) Saltin asennus uudelle virtuaalikoneelleni
+
+
 
 ## c) Saltin viisi tärkeintä tilafunktiota
 
