@@ -47,8 +47,27 @@ Nyt ohjelma on asennettu koneelle oikein.
 - Ohjeet saa komennolla 'sudo salt-call -- local sys.state_doc'
 
 ### Karvinen 2018: Salt Quickstart - Salt Stack Master and Slave on Ubuntu Linux
+- Verkolla on yksi mestari ja yksi orja. Mestarin prompti on "master$" ja orjan "salve$".
+- Jos mestarilla on palomuuri, pitää sille tehdä 4504/tcp ja 4506/tcp reiät muuriin.
+- Jos palomuuria ei ole asennettu testiympäristöön, niin siitä ei tarvitse välittää.
+- Orjan on tiedettävä missä mestari on.
+- Orjalle voi antaa nimen (id) tai se saa sen automaattisesti hostnimeltä. Jokaisella orjalla pitää olla eri id.
+- Uusien asetusten käyttöönotto ja orjan yhdistäminen mestariin tarvitsee demonin uudelleen käynnistyksen
+- Mestarin täytyy hyväksyä "orja-avain".
+- Kun testataan yhteyttä ja saadaan vastaus orjalta niin kaikki hyvin. Nyt voit luoda niin monta orjaa kuin haluat.
 
 ### Karvinen 2006: Raportin kirjoittaminen
+- Raportoinnilla tarkoitetaan, että kerrotaan täsmällisesti mitä tehdään, ja mitä sitten tapahtui.
+- Helpointa kirjoittaa samalla kun teet ja suoraan sähköiseen muotoon.
+- Raportin pitää olla:
+  - Toistettava - muiden pitää pystyä tekemään kaikki niin kuin raportissa lukee ja samat asiat pitää tapahtua.
+    - Kerro ympäristö.
+  - Täsmällinen - kerrotaan kaikki mitä komentoja on annettu tai mitä klikattu.
+    - Kerrotaan kellonajat niin tiedetään paljon aikaa menee työvaiheissa.
+    - Miten asiat onnistuivat tai tuliko virheitä.
+  - Helppolukuinen - kirjoitetaan huolellisesti ja käytetään väliotsikoita.
+  - Viittaa lähteisiin - Hyvät tavat ja akateeminen käytäntö vaatii.
+  - Vältetään pahoja mokia esim. plagiointia tai kuvien luvatonta käyttöä.
 
 ## a) Debian 13-Trixien asennus virtuaalikoneelle
 
