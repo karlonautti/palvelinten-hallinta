@@ -47,7 +47,7 @@ Nyt ohjelma on asennettu koneelle oikein.
 - Ohjeet saa komennolla 'sudo salt-call -- local sys.state_doc'
 
 ### Karvinen 2018: Salt Quickstart - Salt Stack Master and Slave on Ubuntu Linux
-- Verkolla on yksi mestari ja yksi orja. Mestarin prompti on "master$" ja orjan "salve$".
+- Verkolla on yksi mestari ja yksi orja. Mestarin prompti on "master$" ja orjan "slave$".
 - Jos mestarilla on palomuuri, pitää sille tehdä 4504/tcp ja 4506/tcp reiät muuriin.
 - Jos palomuuria ei ole asennettu testiympäristöön, niin siitä ei tarvitse välittää.
 - Orjan on tiedettävä missä mestari on.
@@ -75,12 +75,70 @@ Debian 13-Trixien asennuksessa ei mitään ongelmia.
 
 ## b) Saltin asennus uudelle virtuaalikoneelleni
 
+Tein Saltin asennuksen [Install Salt on Debian 13 Trixie](https://terokarvinen.com/install-salt-on-debian-13-trixie/) mukaan.  
 
+Aloitan tehtävän tekemisen klo 17. Ensimmäiseksi päivitän listan saatavilla olevista paketeista 'sudo apt-get update'  
+![h1-1]()  
+
+Sitten asennan koneelle "wget"-ohjelman komennolla 'sudo apt-get install wget'. Wget pitää asentaa koneelle sen takia, jotta pystytään hakemaan saltin tarvitsema paketit URL-osoitteesta komentoriviltä. Se hakee sen tiedoston netistä ja asentaa sen paikallisesti.
+![h1-2]()  
+
+Luodaan kansio saltia varten. Ladataan tarvittavat tiedostot wgetin avulla koneelle. Hankitaan siis julkinen avain ja sormen jälki, jolla näytetään että luotetaan ohjelmistoon.  
+![h1-3]()  
+![h1-4]()  
+
+Nyt kun saltin paketit on ladattu paikallisesti koneelle niin päivitettän saatavilla olevat paketit taas niin kuin heti alussa tehtiin. 'sudo apt-get update'  
+![h1-5]()  
+
+Sitten asennetaan salt koneelle. Asennan samalla komennolla mestarin ja orjan. 'sudo apt-get install salt-minion salt-master'. Sen jälkeen tarkistan että salt on koneella ja mikä versio.  
+![h1-6]()  
+![h1-7]()  
+
+Annetaan sille oikea komento ja katsotaan toimiiko se. 
+![h1-8]()  
+![h1-9]()  
+
+Tehtävä valmis 17.25.  
 
 ## c) Saltin viisi tärkeintä tilafunktiota
 
+Opettelin saltin tärkeimpiä tilafunktioita [Run Salt Command Locally](https://terokarvinen.com/2021/salt-run-command-locally/) mukaan.  
+
+Ensimmäisenä kokeillaan pkg (package) komentoa. Sillä voidaan asentaa ja poistaa ohjelmia saltin kautta. Asensin 'cowsay'-ohjelman sillä ja testasin sitten toimiiko asentamani ohjelma.  
+![h1-11]()  
+![h1-12]()  
+
+Kaikki meni hyvin.  
+
+Seuraavaksi sitten kokeillaan file-tilafunktioa. Sitä tuli jo kokeiltua edellisessä tehtävässä kun loin "hellokarri" tiedoston. Lisätään sinne nyt teksti "Hei Karri!" käyttämällä saltin file-tilafunktiota.  
+![h1-13]()  
+![h1-16]()  
+![h1-15]()  
+
+Seuraavaksi kokeillaan potkaista demoni käyntiin saltin service-tilafunktiolla. Potkaisen apache2, mutta koska en ole sitä vielä asentanu koneelle niin se ei pysty käynnistymään.  
+![h1-17]()  
+
+Sitten vuorossa on user. Tällä pystytään hallitsemaan koneen käyttäjiä. Luon käyttäjän kartsa ja sitten poistan sen.  
+![h1-19]()  
+![h1-20]()  
+
+Viimeisenä kokeilen cmd.run. Tätä käytettäessä on tärkeää muistaa laittaa lisäfunktiota kuten esim. 'creates', jotta komennosta tulee idempotentti. Muuten saattaa käydä niin että tätä komentoa käytettäessä kirjoittaa tärkeiden asioiden päälle. Luodaan tiedosto 'foo'.
+![h1-21]()  
+
 ## d) idempotentti
+
+Kokeillaan eri komentoja ja katsotaan onko ne idempotentteja. Idempotentilla tarkoitetaan yksinkertaisesti sitä että, jos esim tiedosto tai ohjelma on jo koneella niin salt ei tee sitä uudestaan. Näin ollen ei tule vahingossa kirjoitettua tärkeiden tietojen päälle ja hävitettyä dataa mitä on vaikea tai jopa mahdotonta saada takaisin.  
+
+Ensimmäisenä kokeilen file. Koska aikasemmin lisäsiin "hellokarri" tekstin "Hei Karri!" niin kun annan saman komennon uudestaan niin salt ei päivitä tiedostoa vaan sanoo että se on oikealla mallilla.  
+![h1-14]()  
+
+Kokeillaan vielä uudestaan cmd.run ja yritetään luoda uudestaan tiedosto foo. Koska käytän komennossa 'creates' -tilaa niin salt ei luo uutta foo-tiedostoa tai kirjoita vanhan päälle.  
+![h1-21]()  
 
 ## Lähteet:
 
-Karvinen, Tero. 2025. Palvelinten hallinta. https://terokarvinen.com/palvelinten-hallinta/#h1-viisikko
+Karvinen, Tero. 2025. Palvelinten hallinta. https://terokarvinen.com/palvelinten-hallinta/#h1-viisikko  
+Karvinen, Tero. 2025. Install Salt on Debian 13 Trixie. https://terokarvinen.com/install-salt-on-debian-13-trixie/      
+Karvinen, Tero. 2006. Raportin kirjoittaminen. https://terokarvinen.com/2006/06/04/raportin-kirjoittaminen-4/  
+Karvinen, Tero. 2023. Run Salt Command Locally. https://terokarvinen.com/2021/salt-run-command-locally/    
+Karvinen, Tero. 2018. Salt Quickstart – Salt Stack Master and Slave on Ubuntu Linux. https://terokarvinen.com/2018/03/28/salt-quickstart-salt-stack-master-and-slave-on-ubuntu-linux/  
