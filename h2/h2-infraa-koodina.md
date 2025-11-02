@@ -72,40 +72,40 @@ d) Tee sls-tiedosto, joka käyttää vähintään kahta eri tilafunktiota näist
 
 Menin salt-kansioon ja loin sinne kansion hello. Sitten micron-tekstieditorin avulla loin init.sls-tiedoston sinne. Tiedoston sisään laitoin koodin: '/tmp/hei_infrakoodi: file.managed'  
 
-![h2-1]()  
+![h2-1](h2-1.png)  
 
 Sitten ajoin tiedoston paikallisesti saltilla komennolla 'sudo salt-call --local state.apply hello'. Ajo onnistui ja salt loi uuden tiedoston.  
 
-![h2-2]()  
+![h2-2](h2-2.png)  
 
 ## b) Toppping
 
 Mennään salt-kansioon ja luodaan sinne top.sls-tiedosto.  'sudo micro top.sls'. Ympäristö (env) base:. Sen alle kaikki orjat '*' ja lista tiloista mitä ajetaan. Nyt vain yksi, jonka tein edellisessä tehtävässä.  
 
-![h2-3]()  
+![h2-3](h2-3.png)  
 
 Ajetaan top.sls-tiedosto komennolla 'sudo salt-call --local state.apply'. Ja näyttäisi siltä että ajo onnistui. Mutta tosin tiedosto on jo luotu niin salt ei luo uutta.  
 
-![h2-4]()  
+![h2-4](h2-4.png)  
 
 ## c) Viisikko tiedostossa
 
 Luodaan kaikille tehtävän tilafunktiolle omat kansionsa. Sitten tehdään kaikille omat init.sls-tiedostot  
 
 pkg  
-![h2-5]()  
+![h2-5](h2-5.png)  
 
 file  
-![h2-6]()
+![h2-6](h2-6.png)
 
 service  
-![h2-7]()  
+![h2-7](h2-7.png)  
 
 user  
-![h2-8]()  
+![h2-8](h2-8.png)  
 
 cmd  
-![h2-9]()  
+![h2-9](h2-9.png)  
 
 ## d) Tee sls-tiedosto
 
@@ -113,17 +113,17 @@ Tehdään sls-tiedosto, joka ajaa kaksi eri tilamuuttujaa. Luodaan uusi kansio '
 
 Luodaan init.sls-tiedosto kansioon.  
 
-![h2-10]()  
+![h2-10](h2-10.png)  
 
 Ajetaan tiedosto.
 
-![h2-11]()  
-![h2-12]()  
+![h2-11](h2-11.png)  
+![h2-12](h2-12.png)  
 
 Testataan onko tiedosto idempotentti. Ajetaan tiedosto pariin otteeseen ja näyttäisi siltä että se on idempotentti.
 
-![h2-13]()  
-![h2-14]()  
+![h2-13](h2-13.png)  
+![h2-14](h2-14.png)  
 
 ## Lähteet:
 
