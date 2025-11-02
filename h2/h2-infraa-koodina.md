@@ -72,11 +72,11 @@ d) Tee sls-tiedosto, joka käyttää vähintään kahta eri tilafunktiota näist
 
 Menin salt-kansioon ja loin sinne kansion hello. Sitten micron-tekstieditorin avulla loin init.sls-tiedoston sinne. Tiedoston sisään laitoin koodin: '/tmp/hei_infrakoodi: file.managed'  
 
-![h2-1](h2-1.png)  
+![h2-2](h2-2.png)  
 
 Sitten ajoin tiedoston paikallisesti saltilla komennolla 'sudo salt-call --local state.apply hello'. Ajo onnistui ja salt loi uuden tiedoston.  
 
-![h2-2](h2-2.png)  
+![h2-1](h2-1.png)  
 
 ## b) Toppping
 
