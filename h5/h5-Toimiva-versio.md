@@ -17,3 +17,23 @@ c) Doh! Tee tyhmä muutos gittiin, älä tee commit:tia. Tuhoa huonot muutokset 
 d) Tukki. Tarkastele ja selitä varastosi lokia. Tarkista, että nimesi ja sähköpostiosoitteesi näkyy haluamallasi tavalla ja korjaa tarvittaessa.  
 
 e) Suolattu rakki. Aja Salt-tiloja omasta varastostasi. (Salt tiedostot mistä vain hakemistosta "--file-root teronSaltHakemisto". Esimerkiksi 'sudo salt-call --local --file-root srv/salt/ state.apply', huomaa suhteellinen polku.)  
+
+## Pro Git, 2nd: 1.3 Getting Started - What is Git?
+- Git on versionhallintajärjestelmä, joka seuraa muutoksia tiedostoissa ja mahdollistaa usean ihmisen työskentelyn samassa projektissa.
+- Git tallentaa tiedot snappshotteina.
+- Se toimii pääasiassa paikallisesti, mikä tekee siitä nopean verrattuna keskitettyihin järjestelmiin.
+- Gitissä on kolme pääaluetta:
+  - Working directory
+  - Staging area
+  - Repository
+
+## Git add . && git commit && git pull && git push
+- Git add . - Lisää kaikki muuttuneet ja uudet tiedostot staging-alueelle.
+- Git commit - Luo uuden commitin staging-alueen muutoksista ja avaa oletustekstieditorin commit-viestin kirjoitusta varten.
+- Git pull - Hakee tuoreimmat muutokset ulkoiselta repolta ja yhdistää ne paikalliseen versioon.
+- Git push - Lähettää omat commitit ulkoiseen repoon (esim. Github)
+
+Lähteet: https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet ja https://www.geeksforgeeks.org/git/git-cheat-sheet/
+
+## terokarvinen/suolax
+- 
