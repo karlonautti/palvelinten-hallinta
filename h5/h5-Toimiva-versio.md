@@ -62,14 +62,14 @@ Menen kansioon komennolla 'cd snow-flake' ja luon sinne testitiedoston helposti 
 
 ![h5-4](h5-4.png)  
 
-Sitten lisätään se gitiin. Ensiksi git add . valmistaa uuden tiedoston lisättäväksi. git commit avaa tekstieditorin ja voin laittaa commit-viestin. Tässä vaiheessa en tee git pull, koska repoon ei ole vielä lisätty mitään uutta, joten vain git push lisää tiedoston repoon.  
+Sitten lisätään se gitiin. Ensiksi git add . valmistaa uuden tiedoston lisättäväksi, git commit avaa tekstieditorin ja voin laittaa commit-viestin. Tässä vaiheessa en tee git pull, koska repoon ei ole vielä lisätty mitään uutta, joten vain git push lisää tiedoston repoon.  
 
 ![h5-5](h5-5.png)  
 ![h5-6](h5-6.png)  
+![h5-7](h5-7.png)  
 
 Tarkastellaan miltä repo näyttää wepissa. Tiedosto meni repoon ja kaikki näyttää hyvältä.  
 
-![h5-7](h5-7.png)  
 ![h5-8](h5-8.png)  
 ![h5-9](h5-9.png)  
 
