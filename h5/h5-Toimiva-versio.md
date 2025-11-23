@@ -47,15 +47,15 @@ Lähteet: https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet ja ht
 
 ## a) Online
 
-Menen githubiini, siellä välilehdelle repositories ja luon uuden repon. Annan sille nimeksi snow-flake ja lisään README.md -tiedoston ja lisensoin CNU General Public License 3. Sitten painan 'create repository' -nappia. Ja näin uusi repo on luotu.
+Menen githubiini, siellä välilehdelle repositories ja luon uuden repon. Annan sille nimeksi snow-flake ja lisään README.md -tiedoston ja lisensoin GNU General Public License 3. Sitten painan 'create repository' -nappia. Ja näin uusi repo on luotu.
 
 ![h5-1](h5-1.png)  
+![h5-2](h5-2.png)  
 
 ## b) Dolly
 
 Kloonaan tekemäni repon. Käytän SSH-osoitetta. Olen jo aikaisemmin luonut SSH-avaimen ja laittanut sen Githubiin, joten en luo sitä nyt. Mutta se onnistuu komennolla ssh-keygen ja sitten luodusta kansiosta etsitään .pub-tiedosto ja cat-komennolla luetaan se ja liitetään githubiin settingseihin ssh-avain paikkaan.  
 
-![h5-2](h5-2.png)  
 ![h5-3](h5-3.png)  
 
 Menen kansioon komennolla 'cd snow-flake' ja luon sinne testitiedoston helposti käyttämällä echo-komentoa. Tarkistetaan vielä kansiossa 'ls' että tiedosto on luotu ja luetaan se 'cat test.md'. Homma mennyt niin kuin pitääkin.  
