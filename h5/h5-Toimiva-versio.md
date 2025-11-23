@@ -75,7 +75,7 @@ Tarkastellaan miltä repo näyttää wepissa. Tiedosto meni repoon ja kaikki nä
 
 ## c) Doh!
 
-Tehdään tyhmä muutos gitiin. 'echo "This is a stupid mistake" > test.txt'. Tämä ylikirjoittaa tekstitiedostosta olevan tekstin. Sitten varmistetaan muutos cat-komennolla. Muutos tapahtunut. Perutaan muutos 'git reser --hard'. Koska en ole tehnyt vielä commitia tälle uudelle muutokselle niin git reset -komennolla palataan edelliseen committiin.  
+Tehdään tyhmä muutos gitiin. 'echo "This is a stupid mistake" > test.txt'. Tämä ylikirjoittaa tekstitiedostosta olevan tekstin. Sitten varmistetaan muutos cat-komennolla. Muutos tapahtunut. Perutaan muutos 'git reset --hard'. Koska en ole tehnyt vielä commitia tälle uudelle muutokselle niin git reset -komennolla palataan edelliseen committiin.  
 
 ![h5-10](h5-10.png)  
 
@@ -92,7 +92,7 @@ Toisena commitina luotu test.txt -tiedosto. Sen tein minä ja näkyy koulun säh
 
 ## e) Suolattu rakki
 
-Luon salt-flake -kansioon salt-kansion. Teen top.sls -tiedoston ja package-kansion. Package-kansioon luon init.sls -tiedoston, mihin laitan 3 ohjelmaa, jotka Salt sitten asentaa koneelle. Ohjelmat ovat htop, tree ja ninvaders-peli. Sitten top.sls -tiedostoon base ja sen alle packages niin salt ajaa sitten tämän packages tilan kaikille orjille. Ajetaan kuitenkin homma lokaalisti komennolla 'sudo salt-call --local --file-root salt state.apply'.  
+Luon snow-flake -kansioon salt-kansion. Teen top.sls -tiedoston ja package-kansion. Package-kansioon luon init.sls -tiedoston, mihin laitan 3 ohjelmaa, jotka Salt sitten asentaa koneelle. Ohjelmat ovat htop, tree ja ninvaders-peli. Sitten top.sls -tiedostoon base ja sen alle packages niin salt ajaa sitten tämän packages tilan kaikille orjille. Ajetaan kuitenkin homma lokaalisti komennolla 'sudo salt-call --local --file-root salt state.apply'.  
 
 ![h5-13](h5-13.png)  
 ![h5-14](h5-14.png)  
