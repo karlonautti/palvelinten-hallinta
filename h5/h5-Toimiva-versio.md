@@ -36,4 +36,15 @@ e) Suolattu rakki. Aja Salt-tiloja omasta varastostasi. (Salt tiedostot mistä v
 Lähteet: https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet ja https://www.geeksforgeeks.org/git/git-cheat-sheet/
 
 ## terokarvinen/suolax
-- 
+- Alkuperäinen commit: varasto luotiin ja mukana LICENSE-tiedosto ja README.md.
+- Luodaan ensimmäinen toiminnallisuus kun luodaan "hello world" -moduuli.
+- Lisätty Makefile, jolla ajetaan salt-tiloja. Hello tila tehty tänne.
+- Favorites tila, joka asentaa ohjelmia tehty.
+- Parannettiin README.md -tiedostoa.
+- Lisättiin suosikkiohjelmat Favourites-pakettiin ja ne määriteltiin Salt-tilassa.
+- Parannellaan README-tiedostoa ja Makefileä päivitettiin.
+- README-tiedosto saa lisää tarkempia ohjeita.
+
+## a) Online
+
+
